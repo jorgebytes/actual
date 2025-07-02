@@ -146,7 +146,7 @@ jobs:
             --name test-app \
             --network dast-network \
             -p ${DOCKER_PORT}:${DOCKER_PORT} \
-            -v .:/data
+            -v .:/data \
             test-app:latest
 
           echo "Waiting for application to start..."
