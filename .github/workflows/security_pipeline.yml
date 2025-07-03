@@ -163,8 +163,6 @@ jobs:
         
       - name: Start test application and wait for it to be ready
         run: |
-          mkdir data
-
           docker run -d \
             --name test-app \
             --network dast-network \
