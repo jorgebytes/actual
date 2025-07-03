@@ -6,8 +6,8 @@
 
 services:
   actual-development:
-    build: .
-    image: actual-development
+    container_name: test-app
+    image: test-app:latest
     environment:
       - HTTPS
     ports:
@@ -15,3 +15,9 @@ services:
     volumes:
       - '.:/app'
     restart: 'no'
+    networks:
+      - dast-network
+
+networks:
+  dast-network:
+    external: true
